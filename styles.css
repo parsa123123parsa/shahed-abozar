@@ -1,15 +1,19 @@
 :root {
-  --bg: #f3f7fb;
-  --bg-soft: #edf4fd;
+  --bg: #f4f7fb;
+  --bg-soft: #edf3fb;
   --panel: #ffffff;
   --panel-alt: #f7f9fc;
-  --line: #dfe9f5;
+  --line: #dfe8f5;
   --text: #1f2d3d;
   --muted: #607089;
   --primary: #0d5f9f;
-  --primary-soft: #e3f0ff;
+  --primary-soft: #e6f1ff;
   --secondary: #1f8d74;
-  --secondary-soft: #ddf7ef;
+  --secondary-soft: #e0f9f3;
+  --assistant: #7b5de9;
+  --assistant-soft: #efe9ff;
+  --rep: #d37243;
+  --rep-soft: #fff0e8;
   --gold: #d29a2b;
   --gold-soft: #fff3d9;
   --danger: #c6454c;
@@ -19,9 +23,13 @@
   --shadow: 0 16px 34px rgba(17, 38, 60, 0.08);
 }
 
-* { box-sizing: border-box; }
+* {
+  box-sizing: border-box;
+}
 
-html { scroll-behavior: smooth; }
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   margin: 0;
@@ -31,14 +39,22 @@ body {
   direction: rtl;
 }
 
-button, input, select, textarea { font: inherit; }
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
 
-a { text-decoration: none; color: inherit; }
+a {
+  text-decoration: none;
+  color: inherit;
+}
 
 .site-shell {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 30px 20px 48px;
+  padding: 28px 20px 42px;
 }
 
 .topbar {
@@ -53,7 +69,7 @@ a { text-decoration: none; color: inherit; }
   box-shadow: var(--shadow);
   position: sticky;
   top: 12px;
-  z-index: 30;
+  z-index: 20;
   backdrop-filter: blur(12px);
 }
 
@@ -69,10 +85,10 @@ a { text-decoration: none; color: inherit; }
   border-radius: 18px;
   display: grid;
   place-items: center;
-  background: linear-gradient(135deg, var(--primary), #0b78bd);
+  background: linear-gradient(135deg, var(--primary), #0b7cbc);
   color: #fff;
-  font-weight: 800;
   font-size: 1.7rem;
+  font-weight: 800;
   box-shadow: 0 18px 24px rgba(13, 95, 159, 0.2);
 }
 
@@ -80,7 +96,7 @@ a { text-decoration: none; color: inherit; }
   width: 42px;
   height: 42px;
   border-radius: 14px;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
 }
 
 .brand-text {
@@ -90,7 +106,7 @@ a { text-decoration: none; color: inherit; }
 
 .brand-title {
   font-weight: 800;
-  font-size: 1.08rem;
+  font-size: 1.06rem;
 }
 
 .brand-text small {
@@ -106,7 +122,9 @@ a { text-decoration: none; color: inherit; }
   font-weight: 600;
 }
 
-.topnav a:hover { color: var(--primary); }
+.topnav a:hover {
+  color: var(--primary);
+}
 
 .eyebrow {
   display: inline-flex;
@@ -114,7 +132,7 @@ a { text-decoration: none; color: inherit; }
   border-radius: 999px;
   background: var(--primary-soft);
   color: var(--primary);
-  font-size: 0.72rem;
+  font-size: 0.7rem;
   font-weight: 700;
   margin-bottom: 10px;
 }
@@ -146,8 +164,8 @@ a { text-decoration: none; color: inherit; }
 }
 
 .hero-copy {
-  padding: 36px 30px;
   min-height: 420px;
+  padding: 36px 30px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -156,12 +174,12 @@ a { text-decoration: none; color: inherit; }
 .hero-copy h1 {
   margin: 0 0 18px;
   font-size: clamp(2.6rem, 4vw, 4rem);
-  line-height: 1.25;
+  line-height: 1.2;
 }
 
 .hero-copy p {
   max-width: 650px;
-  margin: 0 0 26px;
+  margin: 0 0 28px;
   color: var(--muted);
   line-height: 2;
   font-size: 1.04rem;
@@ -258,8 +276,8 @@ a { text-decoration: none; color: inherit; }
 }
 
 .hero-panel {
-  padding: 24px;
   min-height: 420px;
+  padding: 24px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -267,8 +285,8 @@ a { text-decoration: none; color: inherit; }
 
 .panel-top {
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
   color: var(--muted);
   font-weight: 600;
 }
@@ -283,19 +301,19 @@ a { text-decoration: none; color: inherit; }
 
 .role-list {
   display: grid;
-  gap: 16px;
+  gap: 14px;
   margin-top: 20px;
 }
 
 .role-item {
+  width: 100%;
   display: flex;
   align-items: center;
   gap: 16px;
-  width: 100%;
   background: var(--panel-alt);
-  padding: 18px 16px;
   border: 1px solid var(--line);
   text-align: right;
+  padding: 18px 16px;
 }
 
 .role-item span {
@@ -314,17 +332,20 @@ a { text-decoration: none; color: inherit; }
   border-radius: 16px;
   display: grid;
   place-items: center;
-  font-weight: 800;
   color: #fff;
+  font-weight: 800;
 }
 
 .role-icon.admin { background: linear-gradient(135deg, #0d5f9f, #0d79c1); }
-.role-icon.deputy { background: linear-gradient(135deg, #1f8d74, #44b59e); }
+.role-icon.assistant { background: linear-gradient(135deg, #7b5de9, #9277f4); }
+.role-icon.rep { background: linear-gradient(135deg, #d37243, #ed8b5a); }
 .role-icon.parent { background: linear-gradient(135deg, #d29a2b, #e9bf64); }
-.role-icon.student { background: linear-gradient(135deg, #6d4ec9, #9e78ef); }
+.role-icon.student { background: linear-gradient(135deg, #1b8f78, #3bb39a); }
 
 .services,
-.about { margin-top: 34px; }
+.about {
+  margin-top: 34px;
+}
 
 .section-heading {
   margin-bottom: 18px;
@@ -392,9 +413,9 @@ a { text-decoration: none; color: inherit; }
 .footer {
   margin-top: 42px;
   padding: 22px 18px 4px;
+  border-top: 1px solid var(--line);
   color: var(--muted);
   text-align: center;
-  border-top: 1px solid var(--line);
 }
 
 .modal {
@@ -407,7 +428,9 @@ a { text-decoration: none; color: inherit; }
 
 .modal.hidden,
 .dashboard.hidden,
-.hidden { display: none !important; }
+.hidden {
+  display: none !important;
+}
 
 .modal-backdrop {
   position: absolute;
@@ -477,14 +500,16 @@ a { text-decoration: none; color: inherit; }
   resize: vertical;
 }
 
-.full-width { width: 100%; }
+.full-width {
+  width: 100%;
+}
 
 .dashboard {
   position: fixed;
   inset: 0;
   display: grid;
   grid-template-columns: 260px minmax(0, 1fr);
-  z-index: 40;
+  z-index: 35;
   background: var(--bg);
   border-radius: 0;
   box-shadow: none;
@@ -508,10 +533,12 @@ a { text-decoration: none; color: inherit; }
 }
 
 .sidebar-header strong,
-.sidebar-header small { display: block; }
+.sidebar-header small {
+  display: block;
+}
 
 .sidebar-header small {
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(255, 255, 255, 0.72);
 }
 
 .sidebar-nav {
@@ -531,7 +558,7 @@ a { text-decoration: none; color: inherit; }
 }
 
 .nav-item.active {
-  background: rgba(106, 180, 255, 0.13);
+  background: rgba(114, 186, 255, 0.13);
   border-color: rgba(132, 194, 255, 0.38);
 }
 
@@ -545,8 +572,8 @@ a { text-decoration: none; color: inherit; }
 
 .panel-header {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
   margin-bottom: 22px;
 }
 
@@ -590,8 +617,8 @@ a { text-decoration: none; color: inherit; }
 
 .service-mini-card {
   background: var(--panel-alt);
-  border-radius: 20px;
   border: 1px solid var(--line);
+  border-radius: 20px;
   padding: 18px 16px;
 }
 
@@ -611,7 +638,8 @@ table {
   min-width: 700px;
 }
 
-th, td {
+th,
+td {
   text-align: right;
   padding: 12px 10px;
   border-bottom: 1px solid var(--line);
@@ -638,10 +666,10 @@ th {
 
 .toolbar {
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
   gap: 12px;
-  margin-bottom: 14px;
+  margin-bottom: 12px;
 }
 
 .search-box {
@@ -652,9 +680,26 @@ th {
   min-height: 48px;
 }
 
+.permission-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.permission-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--panel-alt);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 8px 12px;
+}
+
 .code-box {
   background: #0f172a;
-  color: #e2ecff;
+  color: #e6eefc;
   border-color: #1d2d4b;
   border-radius: 20px;
   overflow: auto;
@@ -691,8 +736,8 @@ th {
   .hero,
   .service-grid,
   .info-grid,
-  .summary-row,
   .card-grid,
+  .summary-row,
   .form-grid {
     grid-template-columns: 1fr 1fr;
   }
@@ -701,12 +746,14 @@ th {
     display: block;
   }
 
-  .sidebar { display: none; }
+  .sidebar {
+    display: none;
+  }
 }
 
 @media (max-width: 760px) {
   .site-shell {
-    padding: 18px 12px 32px;
+    padding: 16px 12px 28px;
   }
 
   .topbar {
@@ -721,8 +768,8 @@ th {
   .hero,
   .service-grid,
   .info-grid,
-  .summary-row,
   .card-grid,
+  .summary-row,
   .form-grid {
     grid-template-columns: 1fr;
   }
