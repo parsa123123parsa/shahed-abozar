@@ -6,7 +6,7 @@
     <title>سامانه مدرسه مدرن شاهد ابوذر</title>
     <meta
       name="description"
-      content="سامانه مدرسه مدرن شاهد ابوذر - پنل مدیریت، معاونت، والدین و دانش‌آموزان"
+      content="سامانه مدرسه مدرن شاهد ابوذر - مدیریت آموزشی، والدین، دانش‌آموزان و نمایندگان"
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -17,22 +17,24 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div class="site-shell">
+    <div class="site-shell" id="landingPage">
       <header class="topbar">
         <div class="brand-wrap">
           <div class="brand-mark">ش</div>
           <div class="brand-text">
-            <span class="brand-title">مدرسه مدرن شاهد ابوذر</span>
-            <small>سامانه مدیریت آموزشی</small>
+            <span class="brand-title">سامانه مدرسه مدرن شاهد ابوذر</span>
+            <small>پورتال آموزشی و مدیریتی</small>
           </div>
         </div>
+
         <nav class="topnav" aria-label="منوی اصلی">
           <a href="#services">خدمات</a>
-          <a href="#about">درباره مدرسه</a>
+          <a href="#overview">مرور</a>
           <a href="#stats">آمار</a>
           <a href="#contact">تماس</a>
         </nav>
-        <button class="ghost-button" data-role-trigger="admin">ورود سامانه</button>
+
+        <button class="primary-button compact" data-role-trigger="admin">ورود مدیر</button>
       </header>
 
       <main>
@@ -41,13 +43,15 @@
             <span class="eyebrow">پورتال مدرسه</span>
             <h1>سامانه مدرسه مدرن شاهد ابوذر</h1>
             <p>
-              یک محیط آموزشی حرفه‌ای، امن و منظم برای مدیریت مدرسه، والدین و
-              دانش‌آموزان با تجربه‌ای نزدیک به پویایی پنل‌های آموزشی مدرن.
+              محیطی مدرن، امن و حرفه‌ای برای مدیریت آموزش، نمرات، تکالیف، والدین و
+              دانش‌آموزان با ساختاری شبیه به تجربه‌های جدید پورتال‌های آموزشی.
             </p>
+
             <div class="hero-actions">
               <button class="primary-button" data-role-trigger="student">ورود دانش‌آموز</button>
               <button class="secondary-button" data-role-trigger="parent">ورود والدین</button>
             </div>
+
             <div class="mini-stats" id="stats">
               <div>
                 <strong>۱۲۰۰+</strong>
@@ -69,33 +73,37 @@
               <span>انتخاب نقش</span>
               <span class="badge">دسترسی سریع</span>
             </div>
+
             <div class="role-list">
               <button class="role-item" data-role-trigger="admin">
                 <span class="role-icon admin">مد</span>
                 <span>
                   <strong>مدیر</strong>
-                  <small>مدیریت کل سامانه</small>
+                  <small>کنترل کل سامانه</small>
                 </span>
               </button>
+
               <button class="role-item" data-role-trigger="deputy">
                 <span class="role-icon deputy">مع</span>
                 <span>
                   <strong>معاون</strong>
-                  <small>نظارت و ارزیابی</small>
+                  <small>نظارت و گزارش</small>
                 </span>
               </button>
+
               <button class="role-item" data-role-trigger="parent">
                 <span class="role-icon parent">وال</span>
                 <span>
                   <strong>والدین</strong>
-                  <small>پیگیری تکالیف و نمرات</small>
+                  <small>پیگیری نمرات و تکالیف</small>
                 </span>
               </button>
+
               <button class="role-item" data-role-trigger="student">
                 <span class="role-icon student">دان</span>
                 <span>
                   <strong>دانش‌آموز</strong>
-                  <small>دسترسی به کارنامه و تکالیف</small>
+                  <small>دسترسی به کارنامه</small>
                 </span>
               </button>
             </div>
@@ -104,60 +112,78 @@
 
         <section class="services" id="services">
           <div class="section-heading">
-            <span class="eyebrow">خدمات اصلی</span>
-            <h2>بخش‌های سامانه آموزشی</h2>
+            <span class="eyebrow">خدمات</span>
+            <h2>بخش‌های اصلی پورتال</h2>
           </div>
+
           <div class="service-grid">
             <article class="service-card">
               <div class="service-icon">نمرات</div>
               <h3>کارنامه و نمرات</h3>
-              <p>مشاهده نمرات، میانگین‌ها و وضعیت درسی به‌صورت دقیق و قابل‌پیگیری.</p>
+              <p>نمایش نمرات، میانگین‌ها و وضعیت تحصیلی به‌صورت دقیق.</p>
             </article>
+
             <article class="service-card">
               <div class="service-icon">کلاس</div>
               <h3>مدیریت کلاس</h3>
-              <p>ثبت حضور و غیاب، رده‌بندی، و پیگیری وضعیت کلاس و پایه‌ها.</p>
+              <p>گزارش کلاس‌ها، پایه‌ها و عملکرد هر گروه آموزشی.</p>
             </article>
+
             <article class="service-card">
               <div class="service-icon">تکالیف</div>
               <h3>تکالیف و امتحانات</h3>
-              <p>ثبت و پیگیری تکالیف، آزمون‌ها و به‌روزرسانی‌های مرتبط با دانش‌آموزان.</p>
+              <p>ثبت و پیگیری تکالیف، آزمون‌ها و پاسخ‌ها در یک چارچوب منظم.</p>
             </article>
+
             <article class="service-card">
               <div class="service-icon">امور</div>
-              <h3>امور اجرایی</h3>
-              <p>مدیریت جلسات، رویدادها، کمپین‌ها، و اطلاع‌رسانی‌های مدرسه.</p>
+              <h3>رویدادها و کمپین‌ها</h3>
+              <p>مدیریت اعلان‌ها، مراسم، جلسات و فعالیت‌های مدرسه.</p>
             </article>
+
             <article class="service-card">
               <div class="service-icon">والدین</div>
               <h3>پورتال والدین</h3>
-              <p>دسترسی امن به کارنامه، حضور و غیاب، تکالیف و پیام‌های مدرسه.</p>
+              <p>دسترسی امن به وضعیت تحصیلی، تکالیف و نمره فرزند.</p>
             </article>
+
             <article class="service-card">
-              <div class="service-icon">پشتیبانی</div>
-              <h3>پشتیبانی مدیریتی</h3>
-              <p>نقش‌های مدیریتی، نمایندگان، و ابزارهای کنترل سطح دسترسی.</p>
+              <div class="service-icon">گزارش</div>
+              <h3>مدیریت نمایندگان</h3>
+              <p>نقش‌های مجزا برای ثبت تکالیف، انضباط، امتحان و نظارت کلاس.</p>
             </article>
           </div>
         </section>
 
-        <section class="about" id="about">
+        <section class="about" id="overview">
           <div class="section-heading">
-            <span class="eyebrow">پیش‌خوان</span>
+            <span class="eyebrow">مرور</span>
             <h2>محیطی حرفه‌ای برای همه نقش‌ها</h2>
           </div>
+
           <div class="info-grid">
             <div class="info-box">
-              <h3>احراز هویت و نقش‌ها</h3>
-              <p>هر نقش با سطح دسترسی خاص خود وارد سیستم می‌شود و جریان کار برای مدیر، معاون، والدین و دانش‌آموز به‌صورت مجزا طراحی شده است.</p>
+              <h3>سطح‌بندی دسترسی</h3>
+              <p>
+                مدیر، معاون، والدین و دانش‌آموز هرکدام با نقش مستقل وارد می‌شوند و
+                فقط بخش‌های مجاز خود را می‌بینند.
+              </p>
             </div>
+
             <div class="info-box">
-              <h3>دسترس‌پذیری و پاسخ‌گویی</h3>
-              <p>رابط کاربری به‌صورت RTL، خوانا و واکنش‌گرا طراحی شده تا روی دسکتاپ و موبایل تجربه‌ی یکسانی ارائه دهد.</p>
+              <h3>طراحی پاسخ‌گو</h3>
+              <p>
+                تجربه کاربری بر اساس RTL، خوانایی بالا و ساختار کارت‌محور برای
+                دسکتاپ و موبایل طراحی شده است.
+              </p>
             </div>
+
             <div class="info-box">
-              <h3>ایمنی و مدیریت</h3>
-              <p>رمز عبور مدیر در اولین ورود به‌صورت دائمی حفظ می‌شود و دسترسی‌های جانبی با نقش‌های مجزا مدیریت می‌شوند.</p>
+              <h3>امنیت و پایداری</h3>
+              <p>
+                ورودها بر اساس نقش، پایه و اعتبارسنجی ساده انجام می‌شوند و رمز عبور
+                مدیر در محل ذخیره می‌شود و برای همیشه حفظ می‌ماند.
+              </p>
             </div>
           </div>
         </section>
@@ -166,7 +192,7 @@
       <footer class="footer" id="contact">
         <div>
           <strong>سامانه مدرسه مدرن شاهد ابوذر</strong>
-          <p>پنل آموزشی، مدیریت مدرسه و ارتباط مؤثر با خانواده‌ها</p>
+          <p>ارتباط مؤثر، مدیریت شفاف و آموزش مدرن.</p>
         </div>
       </footer>
     </div>
@@ -176,8 +202,8 @@
       <div class="modal-panel">
         <div class="modal-header">
           <div>
-            <span class="eyebrow">ورود به سامانه</span>
-            <h3 id="loginTitle">ورود</h3>
+            <span class="eyebrow">ورود</span>
+            <h3 id="loginTitle">پنل کاربری</h3>
           </div>
           <button class="close-button" type="button" data-close-modal="true">×</button>
         </div>
@@ -187,10 +213,12 @@
             <span>نام کاربری</span>
             <input id="username" type="text" placeholder="نام کاربری" autocomplete="username" />
           </label>
+
           <label>
             <span>رمز عبور</span>
             <input id="password" type="password" placeholder="رمز عبور" autocomplete="current-password" />
           </label>
+
           <label id="baseFieldWrapper" class="hidden">
             <span>پایه</span>
             <select id="baseField">
@@ -209,7 +237,7 @@
       </div>
     </div>
 
-    <div class="app-dashboard hidden" id="dashboardApp">
+    <div class="dashboard hidden" id="dashboardApp">
       <aside class="sidebar">
         <div class="sidebar-header">
           <div class="brand-mark small">ش</div>
@@ -218,10 +246,11 @@
             <small id="sidebarSchoolName">شهد ابوذر</small>
           </div>
         </div>
-        <nav id="sidebarNav" class="sidebar-nav"></nav>
+
+        <nav class="sidebar-nav" id="sidebarNav"></nav>
       </aside>
 
-      <div class="main-panel">
+      <main class="main-panel">
         <header class="panel-header">
           <div>
             <span class="eyebrow" id="headerRoleLabel">داشبورد</span>
@@ -231,332 +260,11 @@
         </header>
 
         <div id="dashboardContent"></div>
-      </div>
+      </main>
     </div>
+
+    <div class="toast-container" id="toastContainer"></div>
 
     <script src="app.js"></script>
   </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
